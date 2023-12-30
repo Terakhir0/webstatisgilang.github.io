@@ -1,0 +1,424 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+
+/* header */
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(255, 250, 250, 0.075), rgba(0, 0, 0, 0)), url(Assets/background-1.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  position: fixed;
+  height: 66px;
+  width: 100%;
+  min-width: 1280px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(26, 25, 25, 0.815);
+  padding: 1rem 7%;
+  align-items: left;
+  box-shadow: 0 3px 7px 0 rgb(0 0 0 / 35%);
+  z-index: 2;
+}
+
+nav img {
+  float: left;
+  width: 191px;
+  height: 74px;
+  margin: -15px 23px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 5px 0;
+  overflow: hidden;
+}
+
+nav li {
+  list-style: none;
+  float: left;
+  height: 66px;
+}
+
+nav li a,
+.menu-explore {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  padding: 1rem 1.5rem;
+  color: rgba(231, 226, 226, 0.932);
+  letter-spacing: 0;
+  word-spacing: 6px;
+}
+
+nav ul li a:hover {
+  text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+  color: #fff;
+}
+
+.dropdown {
+  margin: 0 !important;
+  height: 66px;
+}
+
+.menu-explore {
+  position: absolute;
+  padding: 0;
+  margin: 10px -10px;
+  background: #272626;
+  display: block;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  width: 230px;
+  transition: all 0.2s ease-in;
+  z-index: 2;
+}
+
+.menu-explore a {
+  text-align: left;
+  padding: 26px 20px;
+}
+
+.menu-explore a:hover {
+  background-color: rgba(59, 57, 57, 0.863);
+}
+
+.dropdown:hover .menu-explore {
+  opacity: 90%;
+  visibility: visible;
+  pointer-events: painted;
+}
+
+.menu-more {
+  position: absolute;
+  padding: 0;
+  margin: 10px -10px;
+  background: #272626;
+  display: block;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  width: 230px;
+  transition: all 0.2s ease-in;
+  z-index: 2;
+}
+
+.menu-more a {
+  text-align: left;
+  padding: 26px 20px;
+}
+
+.menu-more a:hover {
+  background-color: rgba(59, 57, 57, 0.863);
+}
+
+.dropdown-2:hover .menu-more {
+  opacity: 90%;
+  visibility: visible;
+  pointer-events: painted;
+}
+
+#download {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+#download img {
+  position: relative;
+  float: right;
+  cursor: pointer;
+  left: 130px;
+}
+
+#login-btn {
+  float: right;
+  position: relative;
+  display: flex;
+  align-items: center;
+  bottom: 10px;
+  left: 160px;
+  height: 100%;
+  padding: 20px 10px;
+  background: none;
+  color: #ccc;
+  font-size: 15px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#login-btn i {
+  font-size: 30px;
+  padding: 0 20px;
+}
+
+#login-btn:hover {
+  color: #fff;
+}
+
+/* POSTER */
+
+.header .poster {
+  position: relative;
+  padding: 20px 20px;
+}
+
+.poster h1 {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 10px rgb(114 71 21 / 68%), 0 0 10px rgb(114 71 21 / 68%);
+  margin: 388px auto 27px;
+}
+
+.poster-download {
+  position: absolute;
+  top: 450px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.poster-download li {
+  flex-shrink: 0;
+  width: 188px;
+  height: 70px;
+  margin-right: 15px;
+  opacity: 0.8;
+}
+
+.poster-download li:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+/* NEWS */
+
+.news {
+  height: 910px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  background-image: linear-gradient(rgba(255, 250, 250, 0.075), rgba(0, 0, 0, 0)), url(Assets/news-background.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+h1 {
+  position: relative;
+  margin: 183px auto 60px;
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+}
+
+#karya_box {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  margin: 10px 0 0 50px;
+}
+
+.swiper {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  margin: 0;
+  width: 50%;
+}
+
+#karya_box_kr {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  background: rgba(38, 18, 12, 0.62);
+}
+
+#karya_box_kr img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.news-content {
+  width: 640px;
+  position: relative;
+  margin: 0;
+  background: rgba(12, 18, 38, 0.62);
+}
+
+.news-content h3 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+#karya_box .deskripsi {
+  font-size: 18px;
+}
+
+.news-content li {
+  list-style: none;
+}
+
+.news-tab {
+  display: flex;
+  align-items: flex-start;
+  width: 592px;
+  margin: 35px auto 0;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.news__tab__item--active {
+  color: #3c8ad1;
+}
+
+.news__tab__item {
+  position: relative;
+  padding: 0 19px 12px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.news__tab__item--active::after {
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #3c8ad1;
+}
+
+.news-list {
+  width: 592px;
+  margin: 0 auto;
+}
+
+.news-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  box-sizing: content-box;
+  font-size: 16px;
+  color: #fff;
+}
+
+.news-list a:hover {
+  background-color: rgba(22, 54, 73, 0.62);
+}
+
+.news-title {
+  width: 480px;
+  height: 20px;
+  line-height: 20px;
+  padding-left: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.news-date {
+  position: absolute;
+  top: 0;
+  right: 11px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.lostbelt {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.lostbelt-col {
+  flex-basis: 32%;
+  position: relative;
+  overflow: hidden;
+}
+
+.lostbelt-col img {
+  width: 100%;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+  transition: all 0.5s ease-out;
+}
+
+#lostbelt-logo {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  object-fit: contain;
+  height: 400px;
+  width: 500px;
+  z-index: 2;
+  top: -200px;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* .layer img{
+    height: 400px;
+    width: 300px;
+} */
+
+.lostbelt-col:hover {
+  border: 6px solid white;
+}
+
+#map:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.lostbelt-col:hover .layer {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: none;
+}
